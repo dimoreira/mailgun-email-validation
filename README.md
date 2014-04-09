@@ -48,4 +48,3 @@ Once installed the tests can be run from the project root using:
 ```shell
 $ npm test
 ```
-
