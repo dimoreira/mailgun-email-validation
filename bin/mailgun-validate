@@ -1,1 +1,27 @@
 #!/usr/bin/env node
+
+var program = require('commander');
+var pkg = require('../package.json');
+var validator = require('../lib/mailgun-email-validation');
+
+program
+.version(pkg.version)
+.usage('[email]')
+.parse(process.argv);
+
+if (program.args.length > 1) {
+	console.error('Send one e-mail at a time');
+	process.exit(1);
+}
+
+var email = program.args.shift() || '';
+
+if (email != '') {
+	validator.check(email, function(err, valid) {
+		if (err) throw err;
+		console.log(valid);
+	});
+} else {
+	console.error('Please sent a e-mail');
+	process.exit(1);
+}
