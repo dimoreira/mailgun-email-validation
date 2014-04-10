@@ -20,6 +20,12 @@ $ npm install mailgun-email-validation
 ### The Code
 
 ```javascript
+var validator = require('mailgun-email-validation');
+
+validator.check('test@example.com', function(err, valid) {
+	if (err) throw err;
+	return valid;
+});
 ```
 
 ## CLI Version
@@ -33,7 +39,10 @@ $ npm install -g mailgun-email-validation
 ### The Commands
 
 ```javascript
+$ mailgun-validate 'test@example.com'
 ```
+
+The output is **true** for valid and **false** for invalid.
 
 ## Tests
 
