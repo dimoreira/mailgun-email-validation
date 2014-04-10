@@ -6,9 +6,15 @@
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec tests"
   },
+  "bin": {
+    "mailgun-validate": "./bin/mailgun-validate"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/dimoreira/mailgun-email-validation"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
   },
   "keywords": [
     "mailgun",
@@ -21,7 +27,10 @@
     "scam"
   ],
   "author": "Diego Moreira",
-  "license": "MIT",
+  "licenses": {
+    "type": "MIT",
+    "url": "https://raw.githubusercontent.com/dimoreira/mailgun-email-validation/master/LICENSE"
+  },
   "bugs": {
     "url": "https://github.com/dimoreira/mailgun-email-validation/issues"
   },
