@@ -2,6 +2,8 @@
 
 ## Build Status
 
+[![Build Status](https://travis-ci.org/dimoreira/mailgun-email-validation.svg?branch=master)](https://travis-ci.org/dimoreira/mailgun-email-validation)
+
 ## About
 
 A simple Node module that wraps the email validation API from [Mailgun](http://mailgun.com/).
