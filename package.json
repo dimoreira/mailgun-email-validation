@@ -13,6 +13,7 @@
     "type": "git",
     "url": "http://github.com/dimoreira/mailgun-email-validation"
   },
+  "homepage": "http://dimoreira.github.io/mailgun-email-validation/",
   "engines": {
     "node": ">= 0.10.x"
   },
@@ -26,7 +27,11 @@
     "address",
     "scam"
   ],
-  "author": "Diego Moreira",
+  "author": {
+    "name": "Diego Moreira",
+    "email": "diegoalvesmoreira@gmail.com",
+    "url": "https://twitter.com/_diego_moreira"
+  },
   "licenses": {
     "type": "MIT",
     "url": "https://raw.githubusercontent.com/dimoreira/mailgun-email-validation/master/LICENSE"
