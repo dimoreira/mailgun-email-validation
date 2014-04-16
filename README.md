@@ -46,6 +46,50 @@ $ mailgun-validate 'test@example.com'
 
 The output is **true** for valid and **false** for invalid.
 
+## jQuery Plugin Version
+
+### Instalation
+
+For the jQuery version, download the full plugin or the minified version from the **dist** folder:
+
+```
++-- dist/
+|   +-- jquery.mailgun-email-validation.js
+|   +-- jquery.mailgun-email-validation.min.js
+```
+
+Add the **jQuery** library to your view file before adding the plugin:
+
+```html
+<!-- your-view-or-html-file -->
+<head>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/jquery.mailgun-email-validation.min.js"></script>
+</head>
+```
+
+### Usage
+
+Call the plugin as a jQuery method:
+
+```javascript
+$(document).ready(function() {
+	$.mailgun_validate('test@example.com', function(err, valid) {
+		if(err) throw err;
+
+		/**
+		 * Do what you need whith the "valid" result
+		 *
+		 * valid:
+		 *   (true) - If email is valid
+		 *   (false) - If email it not valid
+		 */
+	});
+});
+```
+
+See **/test/browser/index.html** for examples of use.
+
 ## Tests
 
 A suite of tests is available (using [Mocha](http://visionmedia.github.io/mocha/)) which require **node.js**. Once **node.js** is installed, run the following command from the project root to install the development dependencies:
@@ -58,6 +102,16 @@ Once installed the tests can be run from the project root using:
 
 ```shell
 $ npm test
+```
+
+***
+
+For the jQuery version open the **test/browser/index.html** in the browser for see the tests and usage:
+
+```
++-- test/
+|   +-- browser/
+|       +-- index.html
 ```
 
 ## Author
