@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mailgun E-mail Validation</title>
+		<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="../../src/jquery.mailgun-email-validation.js"></script>
+		<style type="text/css">
+			#success {
+				color: rgba(0,180,130,1);
+			}
+			#error {
+				color: rgba(180,0,130,1);
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var invalidEmail = 'test@example.com';
+			var validEmail = 'diegoalvesmoreira@gmail.com';
+
+			/* #invalid email */
+			validateEmail(invalidEmail);
+
+			/* #valid email */
+			validateEmail(validEmail);
+		});
+
+		function validateEmail(email) {
+			$.mailgun_validate(email, function(err, valid) {
+				if(err) throw err;
+				if (valid) {
+					$('#success').text('The email "' + email +'" is valid');
+				} else {
+					$('#error').text('The email "' + email +'" is invalid');
+				}
+			});
+		};
+	</script>
+	<body>
+		<h1>Mailgun Email Validation jQuery Tests</h1>
+		<p id="success"></p>
+		<p id="error"></p>
+	</body>
+</html>
