@@ -4,7 +4,7 @@
   "description": "Use MailGun API for email validation check",
   "main": "lib/mailgun-email-validation.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha -R spec tests"
+    "test": "NODE_ENV=test mocha -R spec test"
   },
   "bin": {
     "mailgun-validate": "./bin/mailgun-validate"
