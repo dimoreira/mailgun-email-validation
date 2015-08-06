@@ -4,9 +4,9 @@
 			return callback('E-mail cannot be null or empty', null);
 
 		var config = {
-			url: 'https://api.mailgun.net/v2/address/validate',
+			url: 'https://api.mailgun.net/v3/address/validate',
 			username: 'api',
-			key: 'pubkey-5ogiflzbnjrljiky49qxsiozqef5jxp7'
+			key: 'pubkey-7z6l0jz3al1qwrkf84gcnrlcon50c8a5'
 		}
 
 		$.ajax({
