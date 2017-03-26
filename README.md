@@ -92,7 +92,7 @@ See **/test/browser/index.html** for examples of use.
 
 ## Tests
 
-A suite of tests is available (using [Mocha](http://visionmedia.github.io/mocha/)) which require **node.js**. Once **node.js** is installed, run the following command from the project root to install the development dependencies:
+A suite of tests is available (using [Mocha](http://mochajs.org/)) which require **node.js**. Once **node.js** is installed, run the following command from the project root to install the development dependencies:
 
 ```shell
 $ npm install --dev
